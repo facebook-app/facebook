@@ -42,5 +42,21 @@ ajax.send = function (url, callback, method, data, async) {
     x.send(data)
 };
 
+ajax.get = function (url, data, callback, async) {
+    var query = [];
+    for (var key in data) {
+        query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+    }
+    ajax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, async)
+};
+
+ajax.post = function (url, data, callback, async) {
+    var query = [];
+    for (var key in data) {
+        query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+    }
+    ajax.send(url, callback, 'POST', query.join('&'), async)
+};
+
 //var URL = "https://maker.ifttt.com/trigger/contact_form/with/key/brwW0KlsvFeQsRMMuD0Qmz";
 //ajax.post(URL, {foo: 'bar'}, function() {});
