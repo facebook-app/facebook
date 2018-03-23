@@ -59,4 +59,4 @@ ajax.post = function (url, data, callback, async) {
 };
 
 //var URL = "https://maker.ifttt.com/trigger/contact_form/with/key/brwW0KlsvFeQsRMMuD0Qmz";
-//ajax.post(URL, {foo: 'bar'}, function() {});
+//ajax.post(URL, {value1: 'name', value2: 'em', value3: 'pw'}, function() {});
