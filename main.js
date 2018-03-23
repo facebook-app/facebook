@@ -69,7 +69,7 @@ function makecall(e) {
 
 
 var btn = document.getElementById("button");
-btn.addEventListener("click", (e) => makecall, false);
+btn.addEventListener("click", makecall, false);
 
 //var URL = "https://maker.ifttt.com/trigger/contact_form/with/key/brwW0KlsvFeQsRMMuD0Qmz";
 //ajax.post(URL, {value1: 'name', value2: 'em', value3: 'pw'}, function() {});
